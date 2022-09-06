@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Roboto+Slab:wght@300;500&display=swap');
+
+/* variables */
+
+:root {
+
+    /* Font-family */
+    --font-principal: 'Barlow', sans-serif;
+    --font-title: 'Roboto Slab', serif;
+
+    /* Colors */
+    --primary: #120D31;
+    --secondary: #FF5376;
+    --alternative: #302F4D;
+    --text-color: #2B2B2B;
+
+    /* Font-Sizes */
+    --text-large: 5.2em;
+    --text-medium: 2.2em;
+    --text-base: 1.6em;
+    --text-small: 1.4em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* normalize */
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    font-size: 62.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    font-family: var(--font-principal);
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+    text-decoration: none;
+    font-family: var(--font-title);
+    color: var(--text-color);
+}
+
+img {
+    width: 100%;
 }

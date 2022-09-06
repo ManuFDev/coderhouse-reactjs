@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.6rem 0;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.logo {
+    width: 80px;
+}
+
+.menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.menu-link {
+    font-size: var(--text-small);
+    padding: 1.2rem;
+    border: 2px solid #fff;
+    transition: all 1s;
+}
+
+.menu-link:hover {
+    border-color: var(--text-color);
+}
