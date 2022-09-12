@@ -51,3 +51,10 @@ a {
 img {
     width: 100%;
 }
+
+/* main productos*/
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+}
