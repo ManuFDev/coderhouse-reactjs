@@ -13,7 +13,7 @@ function ItemListContainer(props) {
                     <Card.Text className="card-description">
                         {props.description}
                     </Card.Text>
-                    <Button variant="primary" className="card-button">{props.buttonText}</Button>
+                    <Button variant='dark' className='card-button'>{props.buttonText}</Button>
                 </Card.Body>
             </Card>
         </div>
