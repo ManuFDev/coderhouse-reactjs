@@ -31,10 +31,13 @@
 
 html {
     font-size: 62.5%;
+    color: #fff;
 }
 
 body {
     font-family: var(--font-principal);
+    background: #202324;
+    color: #fff;
 }
 
 ul {
@@ -44,8 +47,9 @@ ul {
 a {
     text-decoration: none;
     font-family: var(--font-title);
-    color: var(--text-color);
+    color: #fff;
 }
+
 
 img {
     width: 100%;

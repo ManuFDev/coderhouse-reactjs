@@ -3,7 +3,7 @@ header {
     align-items: center;
     justify-content: space-around;
     padding: 1.6rem 0;
-    border-bottom: 2px solid var(--secondary);
+    background: #0e0f0f;
 }
 
 .logo {
@@ -16,13 +16,12 @@ header {
 }
 
 .menu-link {
-    font-size: var(--text-small);
+    font-size: 1.7em;
     padding: 1.2rem;
-    border: 2px solid #fff;
     transition: all 1s;
     border-radius: 8px;
 }
 
 .menu-link:hover {
-    border-color: var(--text-color);
+    color: #fff;
 }

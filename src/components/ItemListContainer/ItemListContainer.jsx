@@ -1,6 +1,8 @@
 import "./ItemListContainer.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import ItemCount from '../ItemCount/ItemCount';
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 
 function ItemListContainer(props) {
@@ -13,7 +15,11 @@ function ItemListContainer(props) {
                     <Card.Text className="card-description">
                         {props.description}
                     </Card.Text>
-                    <Button variant='dark' className='card-button'>{props.buttonText}</Button>
+                    <ItemCount />
+                    <Button variant='dark' className='card-button'>
+                        <AiOutlineShoppingCart className="cart-icon-button"/>
+                        {props.buttonText}
+                    </Button>
                 </Card.Body>
             </Card>
         </div>
