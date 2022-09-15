@@ -1,35 +1,22 @@
-import React from 'react';
 import './ItemCount.css'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 
+
+
 function ItemCount(props) {
 
-    const [count, setCount] = useState(1);
-    const [stock, setStock] = useState(5);
-
-    const stockAdd = () => {
-        if (count < 5) {
-            setStock(stock - 1);
-        }
-    }
-
-    const stockDel = () => {
-        if (count > 1) {
-            setStock(stock + 1);
-        }
-    }
-
+    const [values, setValues] = useState({ contador: 1, stock: 5 });
     const onAdd = () => {
-        if (count < 5) {
-            setCount(count + 1);
-            stockAdd()
+        if (values.contador < 5) {
+            // setValues({ ...values, contador: values.contador + 1 });
+            setValues({ contador: values.contador + 1, stock: values.stock - 1 });
         }
     }
+
     const onDel = () => {
-        if (count > 1) {
-            setCount(count - 1);
-            stockDel()
+        if (values.contador > 1) {
+            setValues({ contador: values.contador - 1, stock: values.stock + 1 });
         }
     }
 
@@ -40,15 +27,15 @@ function ItemCount(props) {
                     className='btn-resta'
                     onClick={onDel}
                     variant="dark">-</Button>
-                <span className='contador'>{count}</span>
+                <span className='contador'>{values.contador}</span>
                 <Button
                     className='btn-suma'
                     onClick={onAdd}
                     variant="dark">+</Button>
             </div>
-                <div className='stock'>
-                    Stock: {stock}
-                </div>
+            <div className='stock'>
+                Stock: {values.stock}
+            </div>
         </div>
     );
 }

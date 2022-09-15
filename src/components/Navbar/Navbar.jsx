@@ -11,7 +11,7 @@ function Navbar() {
         <nav className="navbar">
             <ul className="menu">
                 <li className="menu-item">
-                    <a href="/#" className="menu-link">Productos</a>
+                    <a href="/#" className="menu-link">Funko Pop</a>
                 </li>
                 <li className="menu-item">
                     <a href="/#" className="menu-link">Nosotros</a>
