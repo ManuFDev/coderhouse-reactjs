@@ -10,20 +10,7 @@ function App() {
 
       <main className="main-container">
         <ItemListContainer
-          img="https://picsum.photos/id/1021/367/267"
-          description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit nemo pariatur error odit laboriosam odio. Magnam vitae illo minima vel maiores voluptate porro dolorem nisi ipsum dicta, qui enim."
-          buttonText="Agregar al carrito"
-        />
-        <ItemListContainer
-          img="https://picsum.photos/id/1033/367/267"
-          description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit nemo pariatur error odit laboriosam odio. Magnam vitae illo minima vel maiores voluptate porro dolorem nisi ipsum dicta, qui enim."
-          buttonText="Agregar al carrito"
-        />
-        <ItemListContainer
-          img="https://picsum.photos/id/1050/367/267"
-          description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit nemo pariatur error odit laboriosam odio. Magnam vitae illo minima vel maiores voluptate porro dolorem nisi ipsum dicta, qui enim."
-          buttonText="Agregar al carrito"
-        />
+        buttonText='Agregar al carrito'/>
       </main>
     </div>
   );
