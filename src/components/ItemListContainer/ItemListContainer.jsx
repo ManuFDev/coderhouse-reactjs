@@ -20,7 +20,7 @@ function ItemListContainer() {
         []
     )
     return (
-        <div className="productos-container container">
+        <div className="">
             <ItemList data={data}/>
         </div>
     );

@@ -4,7 +4,6 @@ import ItemCount from '../ItemCount/ItemCount';
 import { AiOutlineShoppingCart } from "react-icons/ai"
 
 function Item({data}) {
-    
     return(
         <Card
         style={{ width: "30rem" }}
@@ -18,7 +17,7 @@ function Item({data}) {
             <ItemCount />
             <Button variant='dark' className='card-button'>
                 <AiOutlineShoppingCart className="cart-icon-button" />
-                {data.buttonText}
+                Agregar al carrito
             </Button>
         </Card.Body>
     </Card>
