@@ -5,7 +5,7 @@ function ItemList({ data }) {
         <div className='productos-container container'>
             {
                 data.map((items) => (
-                    <Item key={items.id} data={items} />
+                    <Item key={items.id} id={items.id} data={items} />
                 ))
             }
         </div>

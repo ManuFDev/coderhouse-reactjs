@@ -1,46 +1,52 @@
-import { v4 as uuidv4} from "uuid";
 
 export const items = [
     {
-        id: uuidv4(),
+        id: 1,
         title: "Funko Pop Anime: Naruto Shippuden Tobi",
         price: 2500,
         img: "/assets/funkos-naruto/funko-tobi.jpg",
+        category: "categoria1"
     },
     {
-        id: uuidv4(),
+        id: 2,
         title: "Funko Pop Pain Almighty Push 934 Gitd Naruto Shippuden",
         price: 2250,
         img: "/assets/funkos-naruto/funko-pain.jpg",
+        category: "categoria1"
     },
     {
-        id: uuidv4(),
+        id: 3,
         title: "Funko Pop Naruto (Modo Sennin) Naruto: Shippuden",
         price: 3500,
         img: "/assets/funkos-naruto/funko-naruto-sage-mode.webp",
+        category: "categoria1"
     },
     {
-        id: uuidv4(),
+        id: 4,
         title: "Funko Pop Kakashi (Lightning Blade): Naruto Shippuden",
         price: 2350,
         img: "/assets/funkos-naruto/funko-kakashi.webp",
+        category: "categoria1"
     },
     {
-        id: uuidv4(),
+        id: 5,
         title: "Funko Pop Sasuke (Curse Mark): Naruto Shippuden",
         price: 3300,
         img: "/assets/funkos-naruto/funko-sasuke-curse.webp",
+        category: "categoria2"
     },
     {
-        id: uuidv4(),
+        id: 6,
         title: "Funko Pop Naruto (Six Path): Naruto Shippuden",
         price: 4000,
         img: "/assets/funkos-naruto/funko-naruto-sixpath.webp",
+        category: "categoria2"
     },
     {
-        id: uuidv4(),
+        id: 7,
         title: "Funko Pop Uchiha Madara Edo Tensei Special Edition",
         price: 4000,
         img: "/assets/funkos-naruto/funko-uchiha-madara-edotensei.webp",
+        category: "categoria2"
     },
 ];
