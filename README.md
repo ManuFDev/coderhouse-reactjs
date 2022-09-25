@@ -1,1 +1,22 @@
-### Ver el [DEMO](https://fdev-coderhouse-reactjs.netlify.app/) del sitio.
+# Proyecto React JS Coderhouse
+
+## Ver el [DEMO](https://fdev-coderhouse-reactjs.netlify.app/) del sitio.
+
+## Detalles del proyecto
+- Tienda de Funkos para coleccionar.
+
+## Componentes
+- Navbar
+- ItemList
+- ItemListContainer
+- ItemDetailContainer
+- ItemDetail
+- ItemCount
+- Item
+- CartWidget
+
+### `Cuenta con React Router para permitir la navegabilidad entre secciones.`
+
+## `Librerias:`
+
+- React-Bootstrap

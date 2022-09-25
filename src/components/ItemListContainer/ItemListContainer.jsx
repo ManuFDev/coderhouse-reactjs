@@ -1,27 +1,47 @@
 import "./ItemListContainer.css";
-import {items} from '../../services/items';
+import { items } from '../../services/items';
 import { useState, useEffect } from 'react';
 import ItemList from "../ItemList/ItemList";
+import { useParams } from 'react-router-dom';
+
 
 function ItemListContainer() {
-    let [data, setData] = useState([]);
+    const [data, setData] = useState([]);
+    const { cat } = useParams();
 
-    useEffect( () => {
-            console.log('use effect')
-            const getItems = new Promise ( (resolve, reject) => {
-                    setTimeout( () => {
-                        resolve(items)
-                    }, 2000 )
-                })
+    function getSingleCategory(cat) {
+        return new Promise((resolve, reject) => {
+            let itemFilter = items.filter((item) => {
+                return item.category === cat;
+            });
+            setTimeout(() => {
+                console.log(itemFilter)
+                if (itemFilter) resolve(itemFilter);
+                else reject(new Error("Funko no encontrado"));
+            }, 2000);
+        });
+    }
+
+
+    useEffect(() => {
+        if (cat === undefined) {
+            const getItems = new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(items)
+                }, 2000)
+            })
             getItems.then(respuesta => {
                 setData(respuesta)
             })
-        },
-        []
+        } else {
+            getSingleCategory(cat).then((respuesta) => setData(respuesta));
+        }
+    },
+        [cat]
     )
     return (
-        <div className="">
-            <ItemList data={data}/>
+        <div className="container">
+            <ItemList data={data} />
         </div>
     );
 }

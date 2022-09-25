@@ -7,3 +7,17 @@
     color: #fff;
 }
 
+.display {
+        background-color: #fff;
+        color: #000;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 12px;
+        height: 18px;
+        line-height: 17px;
+        position: absolute;
+        text-align: center;
+        width: 18px;
+        transform: translate(-10px, 1px);
+}
+

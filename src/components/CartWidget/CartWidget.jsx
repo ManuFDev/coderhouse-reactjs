@@ -6,6 +6,7 @@ function CartWidget() {
         <div className="cart-container">
             <AiOutlineShoppingCart 
             className='cart-icono'/>
+            <div className='display'>1</div>
         </div>
     )
 }
