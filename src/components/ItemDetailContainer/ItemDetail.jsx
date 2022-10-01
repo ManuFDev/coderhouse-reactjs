@@ -1,31 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
-import { AiOutlineShoppingCart } from "react-icons/ai"
-import { items } from '../../services/items';
 import './ItemDetail.css';
-import { useParams } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
-function ItemDetail() {
 
-    const [product, setProduct] = useState({})
-    const {id} = useParams();
+function ItemDetail({product}) {
 
-    function getSingleProduct(idItem) {
-        return new Promise((resolve, reject) => {
-            let itemFind = items.find((item) => {
-                return item.id === parseInt(idItem)
-            });
-            setTimeout(() => {
-                if (itemFind) resolve(itemFind);
-                else reject(new Error("Funko no encontrado"));
-            }, 2000);
-        });
-    }
-
-    useEffect(() => {
-        getSingleProduct(id).then((resp) => setProduct(resp));
-    }, [id])
+    const [estadoCart,setEstadoCart] = useState(false);
+        const handleAddToCart = (values) => {
+            setEstadoCart(true);
+            toast.success(`Agregaste al carrito ${values} Funkos`, {
+                position: "top-right",
+                autoClose: 1500,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                className: "agregar-carrito",
+                });    
+        }
 
     return (
         <div className='detail-container'>
@@ -35,11 +31,9 @@ function ItemDetail() {
             </div>
             <div className='detail-buy'>   
                     <h2 className='detail-price'>$ {product.price}</h2>
-                <ItemCount />
-                <Button variant='dark' className='detail-button'>
-                    <AiOutlineShoppingCart className="cart-icon-button" />
-                    Agregar al carrito
-                </Button>
+                    { 
+                    estadoCart === false ? <ItemCount onAddToCart={handleAddToCart}/> : <Link className='detail-cart' to={"/cart"}>Ir al carrito</Link>}
+                <ToastContainer/>
             </div>
         </div>
     )

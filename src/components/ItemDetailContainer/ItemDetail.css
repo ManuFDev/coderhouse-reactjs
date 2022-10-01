@@ -68,3 +68,7 @@
 .card-detalle-button:hover {
     color: #fff;
 }
+
+.agregar-carrito {
+    font-size: 1.5em;
+}
