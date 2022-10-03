@@ -17,7 +17,7 @@ function ItemDetailContainer() {
             setTimeout(() => {
                 if (itemFind) resolve(itemFind);
                 else reject(new Error("Funko no encontrado"));
-            }, 2000);
+            }, 0);
         });
     }
 

@@ -15,9 +15,9 @@ function ItemCount({onAddToCart}) {
             setValues({ contador: values.contador + 1, stock: values.stock - 1 });
         }
         if (values.stock <= 1) {
-            toast.error('No podes agregar mas productos al carrito', {
-                position: "top-right",
-                autoClose: 1500,
+            toast.error('No podes sumar mas productos', {
+                position: "top-left",
+                autoClose: 800,
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,

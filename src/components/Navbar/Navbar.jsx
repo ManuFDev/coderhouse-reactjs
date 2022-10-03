@@ -4,6 +4,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import {Link } from 'react-router-dom';
 
 function Navbar() {
+
     return (
         <header>
             <picture className="logo">

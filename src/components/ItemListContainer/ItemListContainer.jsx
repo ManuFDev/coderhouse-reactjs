@@ -9,26 +9,25 @@ function ItemListContainer() {
     const [data, setData] = useState([]);
     const { cat } = useParams();
 
+    //category
     function getSingleCategory(cat) {
         return new Promise((resolve, reject) => {
             let itemFilter = items.filter((item) => {
                 return item.category === cat;
             });
             setTimeout(() => {
-                console.log(itemFilter)
                 if (itemFilter) resolve(itemFilter);
                 else reject(new Error("Funko no encontrado"));
-            }, 2000);
+            }, 1200);
         });
     }
-
 
     useEffect(() => {
         if (cat === undefined) {
             const getItems = new Promise((resolve) => {
                 setTimeout(() => {
                     resolve(items)
-                }, 2000)
+                }, 0)
             })
             getItems.then(respuesta => {
                 setData(respuesta)
