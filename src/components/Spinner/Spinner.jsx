@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import { PacmanLoader } from "react-spinners";
 
 const override = {
@@ -8,16 +8,6 @@ const override = {
 };
 
 function Spinner() {
-
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading(false)
-        }, 1200)
-
-    }, [])
 
     return (
         <PacmanLoader
