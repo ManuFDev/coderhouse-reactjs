@@ -8,11 +8,10 @@ const override = {
 };
 
 function Spinner() {
-
     return (
         <PacmanLoader
-        className="spinner" color={'#626b69'} cssOverride={override}  size={80} />
+            className="spinner" color={'#626b69'} cssOverride={override} size={80} />
     )
 }
 
-export default Spinner
+export default Spinner;
