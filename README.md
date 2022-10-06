@@ -1,6 +1,6 @@
 # Proyecto React JS Coderhouse
 
-## Ver el [DEMO](https://fdev-coderhouse-reactjs.netlify.app/) del sitio.
+## Ver el [DEMO](https://fdev-funkos-reactjs.netlify.app/) del sitio.
 
 ## Detalles del proyecto
 - Tienda de Funkos para coleccionar.

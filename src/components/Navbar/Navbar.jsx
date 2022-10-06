@@ -13,15 +13,6 @@ function Navbar() {
             <nav className="navbar">
                 <ul className="menu">
                     <li className="menu-item">
-                    <Link to='/productos' className="menu-link">Funko Pop</Link>
-                    </li>
-                    <li className="menu-item">
-                    <Link to='/contacto' className="menu-link">Contacto</Link>
-                    </li>
-                    <li className="menu-item">
-                    <Link to='/redes' className="menu-link">Redes</Link>
-                    </li>
-                    <li className="menu-item">
                     <Link to='/categoria/categoria1' className="menu-link">Categoria 1</Link>
                     </li>
                     <li className="menu-item">
