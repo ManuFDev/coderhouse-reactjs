@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 function Item({data}) {
-    const urlFunko = `/funko/${data.id}-${data.title}`
+    const urlFunko = `/funko/${data.id}`
 
     return(
         <Card 
