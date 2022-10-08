@@ -13,7 +13,7 @@ function Navbar() {
             <nav className="navbar">
                 <ul className="menu">
                     <li className="menu-item">
-                    <Link to='/categoria/categoria1' className="menu-link">Categoria 1</Link>
+                    <Link to='/categoria/naruto' className="menu-link">Naruto</Link>
                     </li>
                     <li className="menu-item">
                     <Link to='/categoria/categoria2' className="menu-link">Categoria 2</Link>

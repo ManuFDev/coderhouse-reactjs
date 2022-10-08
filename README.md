@@ -14,6 +14,16 @@
 - ItemCount
 - Item
 - CartWidget
+- CartView
+- Spinner
+- Footer
+
+## Hooks
+- useState
+- useEffect
+- useContext
+- useParams
+
 
 ### `Cuenta con React Router para permitir la navegabilidad entre secciones.`
 
