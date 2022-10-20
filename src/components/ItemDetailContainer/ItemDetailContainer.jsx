@@ -15,23 +15,23 @@ function ItemDetailContainer() {
 
     useEffect(() => {
         getSingleProduct(id)
-        .then((resp) => setProduct(resp))
-        .catch((errormsg) => {
-            console.log(errormsg.message);
-            setError(errormsg.message);
-        })
-        .finally( () => setIsLoading(false));
+            .then((resp) => setProduct(resp))
+            .catch((errormsg) => {
+                console.log(errormsg.message);
+                setError(errormsg.message);
+            })
+            .finally(() => setIsLoading(false));
     }, [id])
 
     if (isLoading) {
         return <>
-        { error ? 
-        <div className='error-container'>
-        <h1 style={{color: "#aa0033"}}>Error obteniendo los datos</h1>
-        <p>{error}</p>
-        </div> 
-        : 
-        <Spinner/>}
+            {error ?
+                <div className='error-container'>
+                    <h1 style={{ color: "#aa0033" }}>Error obteniendo los datos</h1>
+                    <p>{error}</p>
+                </div>
+                :
+                <Spinner />}
         </>
     }
 

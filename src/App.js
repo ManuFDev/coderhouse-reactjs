@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <CartContextProvider>
-        {/* <button onClick={exportDataToFirestore}>asdasdas</button> */}
+        {/* <button onClick={exportDataToFirestore}>agregar productos</button> */}
       <BrowserRouter>
         <Navbar />
         <main className="main-container">

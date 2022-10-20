@@ -17,8 +17,9 @@ const firebaseConfig = {
     projectId: "react-funko-shop",
     storageBucket: "react-funko-shop.appspot.com",
     messagingSenderId: "277562790493",
-    appId: "1:277562790493:web:b7029e6f8433866fe3f3b4"
+    appId: "1:277562790493:web:51a304e3584f8c33e3f3b4"
 };
+
 
 const app = initializeApp(firebaseConfig);
 const database = getFirestore(app);
@@ -115,10 +116,10 @@ export async function exportDataToFirestore() {
     for (let item of items) {
         const newDoc = doc(collectionRef);
         setDoc(newDoc, item)
-        .then(res=> {
-            console.log("documento agregado", "respuesta:", res)
-        })
-        .catch((error => console.log("eror obteniendo los datos:", error)))
+            .then(res => {
+                console.log("documento agregado", "respuesta:", res)
+            })
+            .catch((error => console.log("eror obteniendo los datos:", error)))
     }
 }
 

@@ -16,7 +16,7 @@ function CheckoutForm() {
 
     const navigate = useNavigate();
     const context = useContext(cartContext);
-    const { cart, getItemsTotalPrice } = context;
+    const { cart, getItemsTotalPrice,emptyCard } = context;
 
     const handleCheckout = (e) => {
         e.preventDefault();
@@ -28,6 +28,7 @@ function CheckoutForm() {
             total: getItemsTotalPrice()
         };
         createBuyOrder(orderData).then((orderid) => {
+            emptyCard()
             navigate(`/checkout/${orderid}`);
         });
     }
@@ -81,7 +82,7 @@ function CheckoutForm() {
                         required
                     />
                 </div>
-                <button type='submit' className='cartview-button-finish'>Finalizar Compra</button>
+                <button type='submit' className='cartview-button-finish' >Finalizar Compra</button>
             </form>
         </div>
     )
