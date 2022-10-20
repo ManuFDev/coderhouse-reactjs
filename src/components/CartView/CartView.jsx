@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
 import { cartContext } from '../../context/CartContext';
 import './CartView.css'
 import { Link } from 'react-router-dom';
 import { AiOutlineDelete } from "react-icons/ai";
+import CheckoutForm from '../CheckoutForm/CheckoutForm';
+import { useContext } from 'react';
 
 
 
@@ -10,7 +11,6 @@ function CartView() {
 
   const context = useContext(cartContext);
   const { cart, deleteItem, emptyCard, getItemsTotalPrice } = context;
-
 
   if (cart.length === 0) {
     return <div className='cartview-emptycard-text'><h1>Tu carrito esta vacio...<Link className='cartview-link-home' to={"/"}>Seguir comprando</Link></h1></div>
@@ -36,9 +36,10 @@ function CartView() {
       ))}
       <div className='cartview-total-container'>
         <button className='cartview-button-emptycard' onClick={emptyCard}>Vaciar carrito</button>
-        <button className='cartview-button-finish'>Finalizar Compra</button>
+
       </div>
-        <h2 className='cartview-total'>Total: ${getItemsTotalPrice()}</h2>
+      <h2 className='cartview-total'>Total: ${getItemsTotalPrice()}</h2>
+      <CheckoutForm />
     </div>
   )
 }

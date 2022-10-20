@@ -6,10 +6,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartView from "./components/CartView/CartView";
 import { CartContextProvider } from "./context/CartContext";
 import Footer from "./components/Footer/Footer";
+import Checkout from "./components/Checkout/Checkout";
 
 
 function App() {
-
   return (
     <div className="App">
       <CartContextProvider>
@@ -21,6 +21,7 @@ function App() {
             <Route path="/funko/:id" element={<ItemDetailContainer />} />
             <Route path="/categoria/:cat" element={<ItemListContainer/>}/>
             <Route path="/cart" element={<CartView/>} />
+            <Route path="/checkout/:orderid" element={<Checkout/>} />
           </Routes>
         </main>
         <Footer/>
