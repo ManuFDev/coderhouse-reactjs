@@ -12,12 +12,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCuqs5P1V1e86-UaT4Gf0As1fO2iwICRnQ",
-    authDomain: "react-funko-shop.firebaseapp.com",
-    projectId: "react-funko-shop",
-    storageBucket: "react-funko-shop.appspot.com",
-    messagingSenderId: "277562790493",
-    appId: "1:277562790493:web:51a304e3584f8c33e3f3b4"
+    apiKey: "AIzaSyDXtJ7tqUWcL0covivSUAahGi3l5elozYY",
+    authDomain: "react-funko-nuevo.firebaseapp.com",
+    projectId: "react-funko-nuevo",
+    storageBucket: "react-funko-nuevo.appspot.com",
+    messagingSenderId: "147059831466",
+    appId: "1:147059831466:web:a3a45dee5edefac127d6d3"
 };
 
 
