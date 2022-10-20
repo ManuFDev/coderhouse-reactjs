@@ -8,11 +8,16 @@ import { CartContextProvider } from "./context/CartContext";
 import Footer from "./components/Footer/Footer";
 import Checkout from "./components/Checkout/Checkout";
 
+// import {exportDataToFirestore} from "./services/firestore";
+
 
 function App() {
+
+
   return (
     <div className="App">
       <CartContextProvider>
+        {/* <button onClick={exportDataToFirestore}>asdasdas</button> */}
       <BrowserRouter>
         <Navbar />
         <main className="main-container">
