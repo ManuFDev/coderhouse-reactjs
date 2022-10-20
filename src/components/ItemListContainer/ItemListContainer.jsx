@@ -33,7 +33,6 @@ function ItemListContainer() {
                     setError(errormsg.message);
                 })
                 .finally(() => setIsLoading(false))
-
         }
     },
         [cat]

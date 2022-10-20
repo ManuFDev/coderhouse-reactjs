@@ -7,14 +7,14 @@ export function CartContextProvider({ children }) {
     const [cart, setCart] = useState([]);
 
     function addItem(item, values) {
-        
+
         const newItem = {
             ...item, values
         }
 
-        if(isInCart(newItem.id)) {
+        if (isInCart(newItem.id)) {
             const findProduct = cart.find(product => product.id === newItem.id);
-            const productIndex= cart.indexOf(findProduct);
+            const productIndex = cart.indexOf(findProduct);
             const copyArray = [...cart];
             copyArray[productIndex].values += values;
             setCart(copyArray);
@@ -51,7 +51,15 @@ export function CartContextProvider({ children }) {
     }
 
     return (
-        <cartContext.Provider value={{ cart, addItem, getTotalItemsInCart, isInCart, emptyCard, deleteItem, getItemsTotalPrice }}>
+        <cartContext.Provider value={{
+            cart,
+            addItem,
+            getTotalItemsInCart,
+            isInCart,
+            emptyCard,
+            deleteItem,
+            getItemsTotalPrice
+        }}>
             {children}
         </cartContext.Provider>
     )
