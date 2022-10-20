@@ -47,7 +47,7 @@ function CheckoutForm() {
         <div className="form-container">
             <form onSubmit={handleCheckout}>
                 <div className="form-item">
-                    <label htmlFor="name">Nombre</label>
+                    <label htmlFor="name">Nombre: </label>
                     <input
                         value={dataForm.name}
                         onChange={inputChangeHandler}
@@ -59,7 +59,7 @@ function CheckoutForm() {
                 </div>
 
                 <div className="form-item">
-                    <label htmlFor="telefono">Telefono</label>
+                    <label htmlFor="telefono">Telefono: </label>
                     <input
                         value={dataForm.phone}
                         onChange={inputChangeHandler}
@@ -71,7 +71,7 @@ function CheckoutForm() {
                 </div>
 
                 <div className="form-item">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Email: </label>
                     <input
                         value={dataForm.email}
                         onChange={inputChangeHandler}
