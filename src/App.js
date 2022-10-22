@@ -8,7 +8,7 @@ import { CartContextProvider } from "./context/CartContext";
 import Footer from "./components/Footer/Footer";
 import Checkout from "./components/Checkout/Checkout";
 
-// import {exportDataToFirestore} from "./services/firestore";
+import {exportDataToFirestore} from "./services/firestore";
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <CartContextProvider>
-        {/* <button onClick={exportDataToFirestore}>agregar productos</button> */}
+        <button onClick={exportDataToFirestore}>agregar productos</button>
       <BrowserRouter>
         <Navbar />
         <main className="main-container">
