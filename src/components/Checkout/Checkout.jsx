@@ -1,7 +1,14 @@
+import { useParams } from "react-router-dom";
+import './Checkout.css'
+
+
 function Checkout() {
+
+    const { orderid } = useParams();
+
     return (
-        <div>
-            <h2>Gracias por tu compra!</h2>
+        <div className="checkout-text">
+            <h2>Gracias por tu compra! Tu numero de orden es: <span className="order-text">{orderid}</span></h2>
         </div>
     )
 }

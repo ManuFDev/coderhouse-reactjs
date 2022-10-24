@@ -1,5 +1,16 @@
 # Proyecto React JS Coderhouse
 
+# Levantar el proyecto en local
+
+```
+git clone https://github.com/fdevvv/coderhouse-reactjs.git
+```
+
+`npm install`
+
+`npm start`
+
+
 ## Ver el [DEMO](https://fdev-funkos-reactjs.vercel.app) del sitio.
 
 ## Detalles del proyecto
@@ -17,6 +28,8 @@
 - CartView
 - Spinner
 - Footer
+- Checkout
+- CheckoutForm
 
 ## Hooks
 - useState
@@ -32,3 +45,7 @@
 - React-Bootstrap
 - React-Toastify
 - React-Spinners
+
+## `Database`
+
+- Firebase

@@ -1,9 +1,10 @@
 import './CheckoutForm.css';
-import { useState, useContext } from 'react';
+import { useState, useContext, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cartContext } from '../../context/CartContext';
 import { createBuyOrder } from '../../services/firestore';
-
+import InputForm from './InputForm/InputForm';
+import emailjs from '@emailjs/browser';
 
 
 function CheckoutForm() {
@@ -11,12 +12,12 @@ function CheckoutForm() {
     const [dataForm, setDataForm] = useState({
         name: '',
         phone: '',
-        email: ''
+        email: '',
     });
 
     const navigate = useNavigate();
     const context = useContext(cartContext);
-    const { cart, getItemsTotalPrice,emptyCard } = context;
+    const { cart, getItemsTotalPrice, emptyCard } = context;
 
     const handleCheckout = (e) => {
         e.preventDefault();
@@ -43,45 +44,44 @@ function CheckoutForm() {
     }
 
 
-
     return (
         <div className="form-container">
-            <form onSubmit={handleCheckout}>
-                <div className="form-item">
-                    <label htmlFor="name">Nombre: </label>
-                    <input
-                        value={dataForm.name}
-                        onChange={inputChangeHandler}
-                        name="name"
-                        type="text"
-                        placeholder="Nombre"
-                        required
-                    />
-                </div>
+            <form className='form' onSubmit={handleCheckout}>
+                <InputForm
+                    containerClass='form-item'
+                    labelClass='form-label'
+                    inputClass='form-input'
+                    value={dataForm.name}
+                    handlerOnChange={inputChangeHandler}
+                    name='name'
+                    type='text'
+                    placeHolder='Nombre'
+                    labelText='Nombre'
+                />
 
-                <div className="form-item">
-                    <label htmlFor="telefono">Telefono: </label>
-                    <input
-                        value={dataForm.phone}
-                        onChange={inputChangeHandler}
-                        name="phone"
-                        type="text"
-                        placeholder="Telefono"
-                        required
-                    />
-                </div>
+                <InputForm
+                    containerClass='form-item'
+                    labelClass='form-label'
+                    inputClass='form-input'
+                    value={dataForm.phone}
+                    handlerOnChange={inputChangeHandler}
+                    name='phone'
+                    type='number'
+                    placeHolder='Telefono'
+                    labelText='Telefono'
+                />
 
-                <div className="form-item">
-                    <label htmlFor="email">Email: </label>
-                    <input
-                        value={dataForm.email}
-                        onChange={inputChangeHandler}
-                        name="email"
-                        type="text"
-                        placeholder="Correo"
-                        required
-                    />
-                </div>
+                <InputForm
+                    containerClass='form-item'
+                    labelClass='form-label'
+                    inputClass='form-input'
+                    value={dataForm.email}
+                    handlerOnChange={inputChangeHandler}
+                    name='email'
+                    type='text'
+                    placeHolder='Email'
+                    labelText='Email'
+                />
                 <button type='submit' className='cartview-button-finish' >Finalizar Compra</button>
             </form>
         </div>

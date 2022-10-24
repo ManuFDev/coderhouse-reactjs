@@ -16,7 +16,7 @@ function Navbar() {
                     <Link to='/categoria/naruto' className="menu-link">Naruto</Link>
                     </li>
                     <li className="menu-item">
-                    <Link to='/categoria/categoria2' className="menu-link">Categoria 2</Link>
+                    <Link to='/categoria/dragonball' className="menu-link">Dragon Ball</Link>
                     </li>
                 </ul>
             </nav>
